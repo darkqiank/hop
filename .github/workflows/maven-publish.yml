@@ -48,7 +48,7 @@ jobs:
             ${{ runner.os }}-m2-
             ${{ runner.os }}-
       - name: Build with Maven
-        run: MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"; mvn clean install -T 1C -B -C -e -fae -V -Dmaven.compiler.fork=true -Dsurefire.rerunFailingTestsCount=2 -P '!assemblies' -Djacoco.skip=true -Dmaven.test.skip=true -pl plugins/actions/getpop,plugins/actions/mail,plugins/transforms/mail,plugins/transforms/mailinput --file pom.xml
+        run: MAVEN_OPTS="-XX:+TieredCompilation -XX:TieredStopAtLevel=1"; mvn clean install -T 1C -B -C -e -fae -V -Dmaven.compiler.fork=true -Dsurefire.rerunFailingTestsCount=2 -P '!assemblies' -Djacoco.skip=true -Dmaven.test.skip=true -pl plugins/actions/getpop,plugins/actions/mail,plugins/transforms/mail,plugins/transforms/mailinput -am --file pom.xml
       - run: mkdir staging && cp plugins/actions/getpop/target/*.jar staging
       - run: cp plugins/actions/mail/target/*.jar staging && cp plugins/transforms/mail/target/*.jar staging &&  cp plugins/transforms/mailinput/target/*.jar staging
       - uses: actions/upload-artifact@v2
