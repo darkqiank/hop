@@ -35,11 +35,16 @@
 
     <dependencies>
         <dependency>
-            <groupId>javax.mail</groupId>
-            <artifactId>mail</artifactId>
-            <version>1.4.7</version>
-            <scope>compile</scope>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>jakarta.mail</artifactId>
+            <version>1.6.7</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>javax.mail</groupId>-->
+<!--            <artifactId>mail</artifactId>-->
+<!--            <version>1.4.7</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.hop</groupId>
             <artifactId>hop-action-getpop</artifactId>
